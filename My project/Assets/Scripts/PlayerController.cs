@@ -20,10 +20,15 @@ public class PlayerController : MonoBehaviour
     {
         float directionY = Input.GetAxisRaw("Vertical");
         direction = new Vector2(0, directionY).normalized;
+
+        //float directionX = Input.GetAxisRaw("Horizontal");
+        //direction = new Vector2(0, directionX).normalized;
     }
 
     void FixedUpdate() 
     {
         rb.velocity = new Vector2(0, direction.y * speed);
+       // rb.velocity = new Vector2(0, direction.x * speed);
+
     }
 }
